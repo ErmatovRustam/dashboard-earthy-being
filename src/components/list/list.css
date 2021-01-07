@@ -27,10 +27,16 @@ h3{
     margin: 10px;
     padding-top: 20px;
 }
+
+.page{
+    display: flex;
+    justify-content: center;
+}
+
 .received{
     background-color: green;
 }
-.cancelled{
+.canceled{
     background-color: red;
 }
 .pending{

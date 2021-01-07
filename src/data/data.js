@@ -105,5 +105,19 @@ let productListData = [
         test1: 'test1'
     }
 ]
+let total = {
+     sumReceived : 0,
+     sumCancelled : 0,
+     sumPending : 0
+}
+dashBoardData.map(el => {
+    if (el.status === 'received') {
+        total.sumReceived+= Number(el.amount)
+    }else if (el.status === 'canceled') {
+        total.sumCancelled += Number(el.amount)
+    }else if (el.status === 'pending') {
+        total.sumPending += Number(el.amount)
+    }
+})
 
-module.exports = {dashBoardData, productListData}
+module.exports = {total, dashBoardData, productListData}
