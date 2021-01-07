@@ -1,0 +1,38 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+  border: 1px solid;
+}
+
+tr:nth-child(even) {
+  background-color: #fadcdc;
+}
+tr:status(even) {
+  background-color: #fadcdc;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.list{
+    padding: 15px;
+    margin: 10px;
+    padding-top: 20px;
+}
+.received{
+    background-color: green;
+}
+.cancelled{
+    background-color: red;
+}
+.pending{
+    background-color: orange;
+}
