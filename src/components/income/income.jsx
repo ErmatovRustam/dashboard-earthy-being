@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Bar } from 'react-chartjs-2';
+import { BarChart } from 'react-chartjs-2';
 import { PieChart } from 'react-minimal-pie-chart';
 import dat from '../../data/data'
 import './income.css'
@@ -20,3 +20,9 @@ export default function Dashboard() {
        </div>
    )      
 }
+
+
+
+// how to import charts each one seperatelly or from chartjs
+// styling with css or as paramentr
+//is Chart a component ?

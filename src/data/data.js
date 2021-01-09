@@ -110,14 +110,35 @@ let total = {
      sumCancelled : 0,
      sumPending : 0
 }
+
+let salesByWeek = {
+     week01 : 0,
+     week02 : 0,
+     week03 : 0,
+     week04 : 0
+}
+
 dashBoardData.map(el => {
     if (el.status === 'received') {
-        total.sumReceived+= Number(el.amount)
+        total.sumReceived += Number(el.amount);
+        let purchaseDate = Number(el.purchaseOn.slice(0, el.purchaseOn.indexOf('/')));
+        console.log(purchaseDate + 'date')
+        if (purchaseDate <= 7) salesByWeek.week01++;
+        else if (purchaseDate > 7) salesByWeek.week02++;
+        else if (purchaseDate <= 21) salesByWeek.week03++;
+        else { salesByWeek.week04++ };
     }else if (el.status === 'canceled') {
         total.sumCancelled += Number(el.amount)
     }else if (el.status === 'pending') {
-        total.sumPending += Number(el.amount)
+        total.sumPending += Number(el.amount);
+        let purchaseDate = Number(el.purchaseOn.slice(0, el.purchaseOn.indexOf('/')));
+        if (purchaseDate <= 7) salesByWeek.week01++;
+        else if (purchaseDate <= 14) salesByWeek.week02++;
+        else if (purchaseDate <= 21) salesByWeek.week03++;
+        else  salesByWeek.week04++;
     }
+
+
 })
 
-module.exports = {total, dashBoardData, productListData}
+module.exports = {total, salesByWeek, dashBoardData, productListData}

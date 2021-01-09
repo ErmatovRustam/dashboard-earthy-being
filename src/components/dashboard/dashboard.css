@@ -1,0 +1,8 @@
+.menu{
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  list-style: none;
+}

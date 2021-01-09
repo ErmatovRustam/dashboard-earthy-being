@@ -1,9 +1,11 @@
-.App {
-  text-align: center;
-}
-ul li{
-list-style: none;
-display: inline-block;
-padding: 5px;
-float: left;
+.mainMenu {
+  font-size: 34px;
+  display: flex;
+  justify-content: space-around;
+  font-style: normal;
+  list-style: none;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 5px;
+  background-color: lightblue;
 }

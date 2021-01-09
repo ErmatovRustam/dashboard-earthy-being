@@ -1,22 +1,20 @@
 import './App.css';
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom" 
-import List from './components/list/list'
-import Income from './components/income/income'
-import Productlist from './components/product-list/productlist'
+import List from './components/list/List'
+import Dashboard from './components/dashboard/Dashboard'
+import Productlist from './components/product-list/Product-List'
 
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <ul>
+        <ul className = 'mainMenu'>
           <li>
             <Link to = '/list'>List</Link>
           </li>
-          <li>
-            <Link to = '/income'>Income</Link>
-          </li>
+          <li><Link to = '/dashboard'>Dashboard</Link></li>
           <li>
             <Link to = '/productlist'>Productlist</Link>
           </li>
@@ -26,8 +24,8 @@ function App() {
         <Route path='/list'>
           <List />
         </Route>
-        <Route path='/income'>
-          <Income />
+        <Route path='/dashboard'>
+          <Dashboard />
         </Route>
         <Route path='/productlist'>
           <Productlist />
