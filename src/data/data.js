@@ -117,21 +117,34 @@ let salesByWeek = {
      week03 : 0,
      week04 : 0
 }
+let xyzDayVisAmt = [];
+for (let i = 1; i <= 31; i++){
+    xyzDayVisAmt.push(
+        {
+            "day": i ,
+            "visitors": 0,
+            "amount": 0
+        }
+    )
+}
 
-dashBoardData.map(el => {
+console.log(xyzDayVisAmt)
+
+dashBoardData.map(el=> {
+    let purchaseDate = Number(el.purchaseOn.slice(0, el.purchaseOn.indexOf('/')));
+    xyzDayVisAmt[purchaseDate - 1].visitors++; //increased Num of visitors
     if (el.status === 'received') {
+        xyzDayVisAmt[purchaseDate - 1].amount += Number(el.amount); //increased the total amount of purchase
         total.sumReceived += Number(el.amount);
-        let purchaseDate = Number(el.purchaseOn.slice(0, el.purchaseOn.indexOf('/')));
-        console.log(purchaseDate + 'date')
         if (purchaseDate <= 7) salesByWeek.week01++;
         else if (purchaseDate > 7) salesByWeek.week02++;
         else if (purchaseDate <= 21) salesByWeek.week03++;
         else { salesByWeek.week04++ };
     }else if (el.status === 'canceled') {
         total.sumCancelled += Number(el.amount)
-    }else if (el.status === 'pending') {
+    } else if (el.status === 'pending') {
+        xyzDayVisAmt[purchaseDate - 1].amount += Number(el.amount); //increased the total amount of purchase
         total.sumPending += Number(el.amount);
-        let purchaseDate = Number(el.purchaseOn.slice(0, el.purchaseOn.indexOf('/')));
         if (purchaseDate <= 7) salesByWeek.week01++;
         else if (purchaseDate <= 14) salesByWeek.week02++;
         else if (purchaseDate <= 21) salesByWeek.week03++;
@@ -141,4 +154,4 @@ dashBoardData.map(el => {
 
 })
 
-module.exports = {total, salesByWeek, dashBoardData, productListData}
+module.exports = {xyzDayVisAmt,total, salesByWeek, dashBoardData, productListData}

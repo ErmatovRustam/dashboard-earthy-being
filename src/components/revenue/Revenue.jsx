@@ -36,7 +36,7 @@ function PieChart() {
           options={{
             title:{
               display:true,
-              text:'Total Revenue of the Company',
+              text:`Total Revenue of the Company $ ${dat.total.sumReceived + dat.total.sumPending + dat.total.sumCancelled}`,
               fontSize:20
             },
             legend:{

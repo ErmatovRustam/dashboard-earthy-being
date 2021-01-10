@@ -14,7 +14,9 @@ function App() {
           <li>
             <Link to = '/list'>List</Link>
           </li>
-          <li><Link to = '/dashboard'>Dashboard</Link></li>
+          <li>
+            <Link to='/dashboard'>Dashboard</Link>
+          </li>
           <li>
             <Link to = '/productlist'>Productlist</Link>
           </li>
@@ -29,8 +31,7 @@ function App() {
         </Route>
         <Route path='/productlist'>
           <Productlist />
-        </Route>
-        
+        </Route>      
       </Switch>
     </Router>
   );
