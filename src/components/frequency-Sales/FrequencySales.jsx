@@ -26,7 +26,7 @@ class BubbleChart extends Component {
 			data: [{
 				type: "bubble",
 				indexLabel: "${z}",
-				toolTipContent: "<b> On {label} of December </b><br>'$'{z} Total Sales<br>Number of Visitors {y}",
+				toolTipContent: "<b>December {label} </b><br>Number of Visitors: {y}<br> Total Sales: '$'{z}",
         dataPoints: 
           dat.xyzDayVisAmt.map(el => {
               return({label: el.day, x: el.day , y: el.visitors, z: Math.round(el.amount)})
