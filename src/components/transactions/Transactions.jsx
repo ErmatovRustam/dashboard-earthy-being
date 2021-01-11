@@ -19,17 +19,18 @@ const data = {
 };
 
 const Transactions = () =>{
-    return (
-      <div>
+  return (
+      <div className = 'transactions'>
         <h1 className = 'title'>Transactions</h1>
+      <div className = 'bar'>
         <Bar
           data={data}
-          width={80}
-          height={300}
           options={{
-            maintainAspectRatio: false
+            animationEnabled: true,
+            maintainAspectRatio: true
           }}
         />
+      </div>
       </div>
     );
 };
