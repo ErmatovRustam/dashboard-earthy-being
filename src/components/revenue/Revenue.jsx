@@ -9,7 +9,7 @@ function PieChart() {
 
     useEffect(() => {
         setData({
-            labels: ['Received','Pending', 'Cancelled'],
+            labels: [`Received $${dat.total.sumReceived.toFixed(2)}`,`Pending $${dat.total.sumPending.toFixed(2)}`,`Cancelled $${dat.total.sumCancelled.toFixed(2)}`],
             datasets: [
               {
                 label: 'Average amount',

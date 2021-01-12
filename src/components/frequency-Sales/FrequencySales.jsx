@@ -9,7 +9,7 @@ function FrequencySales(params) {
 		exportEnabled: true,
 		theme: "light2", // "light1", "light2", "dark1", "dark2"
 		title:{
-			text: "Number of Visitors and Purchased Date",
+			text: "Number of Visitors and their Purchase Amount for December (daily)",
 		fontSize: 26
 		},
 		axisX: {
@@ -22,10 +22,10 @@ function FrequencySales(params) {
 		data: [{
 			type: "bubble",
 			indexLabel: "${z}",
-			toolTipContent: "<b>December {label} </b><br>Number of Visitors: {y}<br> Total Sales: '$'{z}",
+			toolTipContent: "<b>December {label} </b><br>Number of Visitors: {y}<br> Total Sales: ${z}",
 	dataPoints: 
 	  dat.xyzDayVisAmt.map(el => {
-		  return({label: el.day, x: el.day , y: el.visitors, z: Math.round(el.amount)})
+		  return ({ label: el.day, x: el.day, y: el.visitors, z: Math.round(el.amount)}) 
 	  }),
 		}]
 	}

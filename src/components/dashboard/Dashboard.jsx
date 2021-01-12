@@ -28,7 +28,7 @@ const Dashboard = () =>{
             </li>
           </ul>
         </div>
-        <Switch>
+        <Switch >
           <Route path='/dashboard/revenue'>
             <Revenue />
           </Route>

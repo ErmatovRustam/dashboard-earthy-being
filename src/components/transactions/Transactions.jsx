@@ -21,7 +21,7 @@ const data = {
 const Transactions = () =>{
   return (
       <div className = 'transactions'>
-        <h1 className = 'title'>Transactions</h1>
+        <h1 className = 'title'>Number of Transactions in December 2020</h1>
       <div className = 'bar'>
         <Bar
           data={data}
