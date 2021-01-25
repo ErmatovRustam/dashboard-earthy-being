@@ -3,7 +3,7 @@ import {  Doughnut } from 'react-chartjs-2';
 import dat from '../../data/data'
 import './revenue.css'
 
-function PieChart() {
+function Revenue() {
 
     const [data, setData] = useState({});
 
@@ -49,4 +49,4 @@ function PieChart() {
     )
 }
 
-export default PieChart;
+export default Revenue;
