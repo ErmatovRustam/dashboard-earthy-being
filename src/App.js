@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom" 
-import List from './components/list/List'
+import List from './components/list/list'
 import Dashboard from './components/dashboard/Dashboard'
 import Productlist from './components/product-list/Product-List'
 
